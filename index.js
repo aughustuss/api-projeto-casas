@@ -1,11 +1,11 @@
 const express = require('express');
-const connectToMongo = require("./lib/mondodb")
-const User = require('./models/user');
+const connectToMongo = require("./backend/lib/mondodb")
+const User = require('./backend/models/user');
 const { hash } = require('bcryptjs');
 
 const app = express();
 app.use(express.json());
-const PORT = 3000;
+const PORT = 8000;
 const HOST = 'localhost'; 
 
 app.listen(PORT, HOST, () => {
